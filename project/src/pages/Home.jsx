@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { Circles } from "react-loader-spinner";
+import Product from "../components/Product";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -38,7 +39,14 @@ const Home = () => {
           />
         </div>
       ) : (
-        products.map((item) => <div key={item.id}>{item.title}</div>)
+        <div
+          className="min-h-[80vh] grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-6xl mx-auto p-3"
+          
+        >
+          {products && products.length > 0
+            ? products.map((item) => <Product item={item} />)
+            : null}
+        </div>
       )}
     </>
   );
