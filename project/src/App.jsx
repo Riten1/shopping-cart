@@ -6,8 +6,13 @@ function App() {
 
   return (
     <>
+    <header>
     <Header /> 
+    </header>
+    <main>
     <Outlet />
+
+    </main>
     <Footer />
      
     </>
