@@ -10,6 +10,7 @@ const cartSlice = createSlice({
       console.log(action);
 
       state.push(action.payload);
+      
     },
 
     removeFromCart: (state, action) => {
